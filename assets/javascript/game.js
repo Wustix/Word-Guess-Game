@@ -12,5 +12,6 @@ var pressAnyKeyToStart =(pressAnyKeyToStart)
 var currentWord = (currentWord)
 var numberOfGuessesRemaining = (numberOfGuessesRemaining)
 var newGame = (newGame)
+var gameOver = (gameOver)
 
 
