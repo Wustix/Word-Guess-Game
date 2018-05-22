@@ -15,6 +15,7 @@ var newGame = (newGame)
 var gameOver = (gameOver)
 
 
-document.onkeyup = function() {
-    
+document.onkeyup = function(event) {
+    var pressAnyKeyToStart = event.key;
+
 }
