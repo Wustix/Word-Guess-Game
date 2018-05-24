@@ -7,7 +7,7 @@ var wins = 0;
 var losses = 0;
 
 
-
+var placeholder = []
 var currentWord = (currentWord)
 var numberOfGuessesRemaining = (numberOfGuessesRemaining)
 var newGame = (newGame)
@@ -22,7 +22,12 @@ document.onkeyup = function(event) {
 // Random word chosen from word array.    
     var wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
 
-    if 
+// Replace underscore placeholder with correct guessed letter.
+    for (var i = 0; i < randomWords.length; i++) {
+        
+    }
+
+    
 
 
 
