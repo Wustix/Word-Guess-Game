@@ -22,12 +22,10 @@ document.onkeyup = function(event) {
 // Random word chosen from word array.    
     var wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
 
-// Replace underscore placeholder with correct guessed letter.
-    for (var i = 0; i < randomWords.length; i++) {
-        
-    }
+// forloop letters to chose from
+    for (var i = 0; i < validLetterGuess.length; i++)
 
-    
+// 
 
 
 
