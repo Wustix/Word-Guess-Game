@@ -11,27 +11,25 @@ var winsCount = document.getElementById("win-count");
 var lossCount = document.getElementById("loss-count");
 var guessLetter = document.getElementById("letters-guessed");
 var guessLeft = document.getElementById("Guesses-Remaining");
+var lettersInWord = document.getElementById("letters-in-word");
+
+
+var wrongLetter = []
+var underScores =[]
+var userGuess = []
 
 
 
-var placeholder = []
-var currentWord = (currentWord)
-var newGame = (newGame)
-var gameOver = (gameOver)
+// Random word chosen from word array.
+function startGame() {   
+    wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
+    
+    for(var i = 0; i < wordChoice.length; i++);
+    {
+        underScores.push("_");
+    }
+    doument.getElementById("")
 
-// Function runs when a user presses a key.
-document.onkeyup = function(event) {
-
-// Determines key that was pressed.   
-    var userBegin = event.key;
-
-// Random word chosen from word array.    
-    var wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
-
-// forloop letters to chose from
-    for (var i = 0; i < validLetterGuess.length; i++)
-
-// 
 
 
 
