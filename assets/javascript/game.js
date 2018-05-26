@@ -5,11 +5,17 @@ var correctGuessLetters = (correctGuessLetters)
 // Var for wins and losses.
 var wins = 0;
 var losses = 0;
+var guessRemaining = 12;
+
+var winsCount = document.getElementById("win-count");
+var lossCount = document.getElementById("loss-count");
+var guessLetter = document.getElementById("letters-guessed");
+var guessLeft = document.getElementById("Guesses-Remaining");
+
 
 
 var placeholder = []
 var currentWord = (currentWord)
-var numberOfGuessesRemaining = (numberOfGuessesRemaining)
 var newGame = (newGame)
 var gameOver = (gameOver)
 
