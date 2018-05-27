@@ -21,8 +21,21 @@ var userGuess = []
 
 
 // Random word chosen from word array.
-function startGame() {   
+document.onkeyup = function(event) {
+
+    var userGuess = event.key;
+
     wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
+
+    for (var i = 0; i < 25; i++);
+
+
+
+
+
+
+function startGame() {   
+    
     
     for(var i = 0; i < wordChoice.length; i++);
     {

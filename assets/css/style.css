@@ -15,7 +15,14 @@ h1 {
     background: -webkit-linear-gradient( red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
- }   
+ } 
+ h3 {
+     font-size: 30px;
+     font-weight: bold;
+ } 
+ p {
+     font-size: 30px;
+ } 
 
 /*-----Header-----*/
 
@@ -43,16 +50,33 @@ h1 {
     clear: both;
 }
 #main-container {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 .placeholder-image {
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     margin: none;
     padding: none;
 }
-.placeholder-image2 {
-    height: 500px;
-    width: 500px;
+#random-word,
+#loaded-word,
+#guess-box {
+    background: black;
+    color: #ffffff;
+    text-align: center;
 }
+#loaded-word {
+    height: 120px;
+    padding-top: 5%;
+}
+#guess-box,
+#guess-num,
+#guessed-letters,
+#guessed-letters-area,
+#win-some,
+#win-num {
+    height: 70px;
+    padding-top: 2%;
+}
+
 
