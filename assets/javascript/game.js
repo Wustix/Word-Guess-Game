@@ -1,7 +1,7 @@
-var validLetterGuess = [ 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-var randomWords = ['beachball', 'chair', 'sand', 'ocean', 'lifeguard', 'sandcastle', 'boats', 'pier', 'towel', 'lotion', 'dolphin', 'drinks', 'seashells', 'crabs', 'swimsuit', 'sunglasses']
-var incorrectGuessLetters = (incorrectGuessLetters)
-var correctGuessLetters = (correctGuessLetters)
+var validLetterGuess = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var randomWords = ['beachball', 'chair', 'sand', 'ocean', 'lifeguard', 'sandcastle', 'boats', 'pier', 'towel', 'lotion', 'dolphin', 'drinks', 'seashells', 'crabs', 'swimsuit', 'sunglasses'];
+var incorrectGuessLetters = (incorrectGuessLetters);
+var correctGuessLetters = (correctGuessLetters);
 // Var for wins and losses.
 var wins = 0;
 var losses = 0;
@@ -14,37 +14,25 @@ var guessLeft = document.getElementById("Guesses-Remaining");
 var lettersInWord = document.getElementById("letters-in-word");
 
 
-var wrongLetter = []
-var underScores =[]
-var userGuess = []
+var wrongLetter = [];
+var underScores = [];
+var userGuess = [];
+var wordChoice;
 
 
 
-// Random word chosen from word array.
-document.onkeyup = function(event) {
+// Function runs when user presses a key.
 
-    var userGuess = event.key;
+function startGame() {
 
     wordChoice = randomWords[Math.floor(Math.random() * randomWords.length)];
 
-    for (var i = 0; i < 25; i++);
-
-
-
-
-
-
-function startGame() {   
-    
-    
-    for(var i = 0; i < wordChoice.length; i++);
-    {
-        underScores.push("_");
-    }
-    doument.getElementById("")
-
-
-
-
-
+    for (i = 0; i < wordChoice.length; i++)
+{
+    underScores.push("_");
 }
+}
+
+
+
+startGame();
