@@ -68,7 +68,7 @@ document.onkeyup = function (event) {
                 letterCount++;
                 winOrLose();
             }
-             
+             document.getElementById("word-blanks").textContent = userGuess;
         }
         
     }
