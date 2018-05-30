@@ -9,7 +9,6 @@ var guessRemaining = 12;
 
 
 
-
 var wrongLetter = [];
 var underScores = [];
 var userGuess = [];
@@ -38,6 +37,7 @@ function startGame() {
 }
 
 function updateScore() {
+
     document.getElementById("num-wins").textContent = wins
 
 }
@@ -63,13 +63,13 @@ document.onkeyup = function (event) {
         for (var i = 0; i < wordChoice.length; i++) {
             if (wordChoice[i] === userGuess) {
                 underScores[i] = userGuess;
+                
                
                 console.log(underScores)
                 letterCount++;
                 winOrLose();
             }
-             document.getElementById("word-blanks").textContent = userGuess;
-        }
+            
         
     }
 
