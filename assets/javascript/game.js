@@ -14,7 +14,7 @@ var underScores = [];
 var userGuess = [];
 var wordChoice;
 var letterCount = 0;
-var lockGame = false;
+
 
 
 
@@ -85,9 +85,9 @@ function userKeyGuessed() {
 }
 
 function endGame() {
-    lockGame !== true;
     wrongLetter = [];
     guessRemaining = 12;
+    underScores = [];
     startGame();
 
 }
