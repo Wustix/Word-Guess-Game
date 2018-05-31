@@ -1,7 +1,7 @@
 var validLetterGuess = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var randomWords = ['beachball', 'chair', 'sand', 'ocean', 'lifeguard', 'sandcastle', 'boats', 'pier', 'towel', 'lotion', 'dolphin', 'drinks', 'seashells', 'crabs', 'swimsuit', 'sunglasses'];
-var incorrectGuessLetters = (incorrectGuessLetters);
-var correctGuessLetters = (correctGuessLetters);
+
+
 // Var for wins and losses.
 var wins = 0;
 var losses = 0;
@@ -14,9 +14,9 @@ var underScores = [];
 var userGuess = [];
 var wordChoice;
 var letterCount = 0;
+var lockGame = false;
 
 
-// Function runs when user presses a key.
 
 function startGame() {
 
@@ -27,13 +27,13 @@ function startGame() {
         underScores.push("_");
     }
     // Page content.
-    document.getElementById("word-blanks").textContent = underScores.join(" ");
+    document.getElementById("word-blanks").textContent = underScores.join(' ');
     document.getElementById("num-left").textContent = guessRemaining;
-    
+
     // Game restart.
     wrongLetter = [];
     guessRemaining = 12;
-    
+
 }
 
 function updateScore() {
@@ -43,47 +43,61 @@ function updateScore() {
 }
 function winOrLose() {
 
+
     if (letterCount === wordChoice.length) {
-    wins++;
-    updateScore();
+        wins++;
+        updateScore();
+        alert("Surf's Up, You are a Winner!!");
+
+
+    }
+    else if (guessRemaining === 0) {
+        alert("Bummer Dude, you Lose");
+
+    }
+
 }
-    else if (guessRemaining === 0);
-}
 
-startGame();
-updateScore();
-
-// User input.
-document.onkeyup = function (event) {
-
-    userGuess = event.key;
+function userKeyGuessed() {
 
     if (wordChoice.indexOf(userGuess) > -1) {
 
         for (var i = 0; i < wordChoice.length; i++) {
             if (wordChoice[i] === userGuess) {
                 underScores[i] = userGuess;
-                
-               
+
+
                 console.log(underScores)
                 letterCount++;
-                winOrLose();
+
             }
-             document.getElementById("word-blanks").textContent = userGuess;
+            document.getElementById("word-blanks").textContent = underScores.join(' ');
         }
-        
+
     }
 
     else {
 
         wrongLetter.push(userGuess);
+        document.getElementById("guessed-already").textContent = wrongLetter.join(' ');
         guessRemaining--;
-       console.log(guessRemaining)
-        winOrLose();
-    }
+        document.getElementById("num-left").textContent = guessRemaining;
+        console.log(guessRemaining)
 
-    
+    }
 }
+
+
+
+// User input.
+document.onkeyup = function (event) {
+
+    userGuess = event.key;
+    userKeyGuessed();
+    winOrLose();
+
+}
+startGame();
 
 
 
