@@ -29,10 +29,7 @@ function startGame() {
     // Page content.
     document.getElementById("word-blanks").textContent = underScores.join(' ');
     document.getElementById("num-left").textContent = guessRemaining;
-
-    // Game restart.
-    wrongLetter = [];
-    guessRemaining = 12;
+    
 
 }
 
@@ -48,12 +45,12 @@ function winOrLose() {
         wins++;
         updateScore();
         alert("Surf's Up, You are a Winner!!");
-
+        endGame();
 
     }
     else if (guessRemaining === 0) {
         alert("Bummer Dude, you Lose");
-
+        endGame();
     }
 
 }
@@ -87,6 +84,13 @@ function userKeyGuessed() {
     }
 }
 
+function endGame() {
+    lockGame !== true;
+    wrongLetter = [];
+    guessRemaining = 12;
+    startGame();
+
+}
 
 
 // User input.
