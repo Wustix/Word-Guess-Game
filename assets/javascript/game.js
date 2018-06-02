@@ -9,7 +9,7 @@ var wrongLetter = [];
 var underScores = [];
 var userGuess = [];
 var wordChoice;
-var letterCount = 0;
+
 
 
 
@@ -33,7 +33,7 @@ function startGame() {
 function winOrLose() {
 
 
-    if (letterCount === wordChoice.length) {
+    if (validLetterGuess === wordChoice.length) {
         wins++;
         document.getElementById("num-wins").textContent = wins
         alert("Surf's Up, You are a Winner!!");
@@ -57,7 +57,7 @@ function userKeyGuessed() {
 
 
                 console.log(underScores)
-                letterCount++;
+                
 
             }
             document.getElementById("word-blanks").textContent = underScores.join(' ');
@@ -80,7 +80,7 @@ function endGame() {
     wrongLetter = [];
     guessRemaining = 12;
     underScores = [];
-    startGame();
+    
 
 }
 
