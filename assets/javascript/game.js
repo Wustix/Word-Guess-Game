@@ -4,11 +4,7 @@ var randomWords = ['beachball', 'chair', 'sand', 'ocean', 'lifeguard', 'sandcast
 
 // Var for wins and losses.
 var wins = 0;
-var losses = 0;
 var guessRemaining = 12;
-
-
-
 var wrongLetter = [];
 var underScores = [];
 var userGuess = [];
@@ -33,17 +29,13 @@ function startGame() {
 
 }
 
-function updateScore() {
 
-    document.getElementById("num-wins").textContent = wins
-
-}
 function winOrLose() {
 
 
     if (letterCount === wordChoice.length) {
         wins++;
-        updateScore();
+        document.getElementById("num-wins").textContent = wins
         alert("Surf's Up, You are a Winner!!");
         endGame();
 
