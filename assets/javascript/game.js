@@ -8,7 +8,8 @@ var guessRemaining = 12;
 var wrongLetter = [];
 var underScores = [];
 var userGuess = [];
-var wordChoice;
+var wordChoice = [];
+
 
 
 
@@ -25,25 +26,7 @@ function startGame() {
     // Page content.
     document.getElementById("word-blanks").textContent = underScores.join(' ');
     document.getElementById("num-left").textContent = guessRemaining;
-    
 
-}
-
-
-function winOrLose() {
-
-
-    if (validLetterGuess === wordChoice.length) {
-        wins++;
-        document.getElementById("num-wins").textContent = wins
-        alert("Surf's Up, You are a Winner!!");
-        endGame();
-
-    }
-    else if (guessRemaining === 0) {
-        alert("Bummer Dude, you Lose");
-        endGame();
-    }
 
 }
 
@@ -55,10 +38,7 @@ function userKeyGuessed() {
             if (wordChoice[i] === userGuess) {
                 underScores[i] = userGuess;
 
-
                 console.log(underScores)
-                
-
             }
             document.getElementById("word-blanks").textContent = underScores.join(' ');
         }
@@ -76,17 +56,33 @@ function userKeyGuessed() {
     }
 }
 
-function endGame() {
-    wrongLetter = [];
-    guessRemaining = 12;
-    underScores = [];
+function winOrLose() {
+
+
+    if ( wordChoice === wordChoice.length) {
+        alert("Surf's Up, You are a Winner!!");
+        wins++;
+        updateScore();
+        
+    }
+    else if (guessRemaining === 0) {
+        alert("Bummer Dude, you Lose");
+    }
     
 
 }
 
+function updateScore() {
+    document.getElementById("num-wins").textContent = wins;
+}
+
+
+updateScore()
+
 
 // User input.
 document.onkeyup = function (event) {
+    
 
     userGuess = event.key;
     userKeyGuessed();
@@ -94,6 +90,7 @@ document.onkeyup = function (event) {
 
 }
 startGame();
+
 
 
 
